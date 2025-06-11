@@ -22,3 +22,11 @@ router.delete('/:id', contactsController.deleteContact);
 
 // Export the router
 module.exports = router;
+
+
+
+
+
+
+
+

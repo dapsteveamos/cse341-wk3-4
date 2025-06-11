@@ -4,7 +4,7 @@ GET http://localhost:3000/contacts
 
 ###
 
-GET http://localhost:3000/contacts/683271411b1cf7aa98fa2b17
+GET http://localhost:3000/contacts/6848e4edf4cc1c72c9206b2f
 
 ###
 
@@ -21,11 +21,11 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:3000/contacts/683271411b1cf7aa98fa2b17
+PUT http://localhost:3000/contacts/6848e4edf4cc1c72c9206b2f
 Content-Type: application/json
 
 {
-    "firstName": "postFirstname",
+    "firstName": "put update",
     "lastName": "postupdate",
     "email": "postupdate@gmail.com",
     "favoriteColor": "Green",
@@ -34,4 +34,4 @@ Content-Type: application/json
 
 
 ###
-DELETE http://localhost:3000/contacts/683271411b1cf7aa98fa2b17
+DELETE http://localhost:3000/contacts/6848e4edf4cc1c72c9206b2f

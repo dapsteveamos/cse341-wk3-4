@@ -5,13 +5,14 @@
     "description": "Contacts API",
     "version": "1.0.0"
   },
-  "host": "wk3-4.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-    "https"
+    "https",
+    "http"
   ],
   "paths": {
-    "/contacts": {
+    "/": {
       "get": {
         "tags": [
           "Contacts"

@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dapsteveamos/cse341-project1.git"
+    "url": "git+https://github.com/dapsteveamos/cse341-wk3-4.git"
   },
   "author": "Steve Amos",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dapsteveamos/cse341-project1/issues"
+    "url": "https://github.com/dapsteveamos/cse341-wk3-4/issues"
   },
-  "homepage": "https://github.com/dapsteveamos/cse341-project1#readme",
+  "homepage": "https://github.com/dapsteveamos/cse341-wk3-4#readme",
   "dependencies": {
     "body-parser": "^2.2.0",
     "cse341-project1": "file:",

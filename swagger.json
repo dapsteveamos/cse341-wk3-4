@@ -12,15 +12,12 @@
     "http"
   ],
   "paths": {
-    "/": {
+    "/contacts": {
       "get": {
         "tags": [
           "Contacts"
         ],
-        "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "description": "Get all contacts",
         "responses": {
           "200": {
             "description": "OK"
@@ -34,7 +31,7 @@
         "tags": [
           "Contacts"
         ],
-        "description": "",
+        "description": "Create a new contact",
         "parameters": [
           {
             "name": "body",
@@ -71,14 +68,10 @@
         }
       }
     },
-    "/{id}": {
+    "/contacts/{id}": {
       "get": {
         "tags": [
           "Contacts"
-        ],
-        "description": "",
-        "produces": [
-          "application/json"
         ],
         "parameters": [
           {
@@ -107,7 +100,6 @@
         "tags": [
           "Contacts"
         ],
-        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -159,7 +151,6 @@
         "tags": [
           "Contacts"
         ],
-        "description": "",
         "parameters": [
           {
             "name": "id",

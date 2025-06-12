@@ -1,8 +1,8 @@
 const mongodb = require('../data/database');
 const ObjectId = require('mongodb').ObjectId;
 
+// Get all contacts
 const getAll = async (req, res) => {
-    //#swagger.tags=['Contacts']
     try {
         const result = await mongodb.getDatabase().db().collection('contacts').find();
         const contacts = await result.toArray();
@@ -14,8 +14,8 @@ const getAll = async (req, res) => {
     }
 };
 
+// Get a single contact by ID
 const getSingle = async (req, res) => {
-    //#swagger.tags=['Contacts']
     try {
         const id = req.params.id;
         if (!ObjectId.isValid(id)) {
@@ -35,8 +35,8 @@ const getSingle = async (req, res) => {
     }
 };
 
+// Create a new contact
 const createContact = async (req, res) => {
-    //#swagger.tags=['Contacts']
     try {
         const contact = {
             firstName: req.body.firstName,
@@ -53,8 +53,8 @@ const createContact = async (req, res) => {
     }
 };
 
+// PUT route - update contact by ID
 const updateContact = async (req, res) => {
-    //#swagger.tags=['Contacts']
     try {
         const id = req.params.id;
         if (!ObjectId.isValid(id)) {
@@ -80,8 +80,8 @@ const updateContact = async (req, res) => {
     }
 };
 
+// DELETE route - delete contact by ID
 const deleteContact = async (req, res) => {
-    //#swagger.tags=['Contacts']
     try {
         const id = req.params.id;
         if (!ObjectId.isValid(id)) {

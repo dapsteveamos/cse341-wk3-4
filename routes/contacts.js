@@ -1,23 +1,21 @@
 const express = require('express');
 const router = express.Router();
+const { isAuthenticated } = require('../middleware/authenticate');
+const contactsController = require('../controllers/contacts');  // Assuming you have a contacts controller
 
-// Import the contacts controller
-const contactsController = require('../controllers/contacts');
-
-// Get all contacts
+// Get all contacts (public)
 router.get('/', contactsController.getAll);
 
-// Get a single contact by ID
+// Get a single contact (public)
 router.get('/:id', contactsController.getSingle);
 
-// Create a new contact
-router.post('/', contactsController.createContact);
+// Create a new contact (protected)
+router.post('/', isAuthenticated, contactsController.createContact);
 
-// Update an existing contact
-router.put('/:id', contactsController.updateContact);
+// Update a contact (protected)
+router.put('/:id', isAuthenticated, contactsController.updateContact);
 
-// Delete a contact
-router.delete('/:id', contactsController.deleteContact);
+// Delete a contact (protected)
+router.delete('/:id', isAuthenticated, contactsController.deleteContact);
 
-// Export the router
 module.exports = router;

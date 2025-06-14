@@ -48,6 +48,11 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Remove this if it's not necessary anymore, or you can modify it.
+app.get('/', (req, res) => {
+    res.send('Welcome to the Contacts API!');  
+});
+
 // Swagger UI route
 app.use('/api-doc', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
@@ -64,10 +69,7 @@ app.get('/auth/github/callback',
         res.redirect('/');
     });
 
-// Remove this if it's not necessary anymore, or you can modify it.
-// app.get('/', (req, res) => {
-//     res.send('Welcome to the Contacts API!');  
-// });
+
 
 // Initialize the database before starting the server
 initDb()
